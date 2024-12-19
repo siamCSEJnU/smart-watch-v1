@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smartwatch Store</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-thumbnail">
+        <img id="thumnail-img" src="./images/default-img.png" alt="" />
+        <div class="thumbnail-text">
+          <h1 id="product-title">Classy Modern Smart Watch</h1>
+          <div class="review">
+            <span id="star-review"
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i
+              ><i class="fa-regular fa-star"></i
+            ></span>
+            <span id="review-count">(2 reviews)</span>
+          </div>
+          <p id="price">
+            <del id="deleted-price">$99.00</del>
+            <span id="new-price">$79.00</span>
+          </p>
+          <p id="description">
+            I must explain to you how all this mistaken idea of denoun cing ple
+            praising pain was born and I will give you a complete account of the
+            system, and expound the actual teaching.
+          </p>
+          <div id="type-model">
+            <div class="type-container">
+              <p class="type">Type</p>
+              <p class="product">Watch</p>
+            </div>
+            <div class="type-container">
+              <p class="type">Model Number</p>
+              <p class="product" id="model-name">Forerunner 290XT</p>
+            </div>
+          </div>
+
+          <!-- band color specificaiton  -->
+          <div>
+            <p class="band-wrist">Band Color</p>
+            <div id="band-colors">
+              <i
+                class="fa-solid fa-circle purple-opt options selected"
+                data-color="purple"
+              ></i>
+              <i
+                class="fa-solid fa-circle cyan-opt options"
+                data-color="cyan"
+              ></i>
+              <i
+                class="fa-solid fa-circle blue-opt options"
+                data-color="blue"
+              ></i>
+              <i
+                class="fa-solid fa-circle black-opt options"
+                data-color="black"
+              ></i>
+            </div>
+          </div>
+          <!-- wrist size measurement -->
+          <div>
+            <p class="band-wrist">Wrist Size</p>
+            <div id="size-buttons">
+              <button
+                class="size-button selected-size"
+                data-size="S"
+                data-price="69"
+              >
+                <span class="button-text">S</span>
+                <span class="button-price">$69</span>
+              </button>
+              <button class="size-button" data-size="M" data-price="69">
+                <span class="button-text">M</span>
+                <span class="button-price">$79</span>
+              </button>
+              <button class="size-button" data-size="L" data-price="69">
+                <span class="button-text">L</span>
+                <span class="button-price">$89</span>
+              </button>
+              <button class="size-button" data-size="XL" data-price="69">
+                <span class="button-text">XL</span>
+                <span class="button-price">$99</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- qunatity and addtocart button  -->
+          <div class="add-to-cart-section">
+            <button class="quantity-btn decrease">-</button>
+            <span class="quantity-display">0</span>
+            <button class="quantity-btn increase">+</button>
+            <button class="add-to-cart-btn">Add to cart</button>
+            <i class="fa-regular fa-heart fav"></i>
+          </div>
+        </div>
+      </div>
+      <!-- floating checkout button -->
+      <div class="checkout-container">
+        <button id="checkout-btn">
+          <span id="checkout-text">Checkout</span>
+          <span id="checkout-quantity">2</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="cart-modal-overlay">
+      <div class="modal-container" id="cart-modal">
+        <h2 id="modal-title">Your Cart</h2>
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th id="table-header-item">Item</th>
+              <th>Color</th>
+              <th>Size</th>
+              <th>Qnt</th>
+              <th id="teble-header-price">Price</th>
+            </tr>
+          </thead>
+
+          <tbody id="cart-items"></tbody>
+          <tfoot class="table-footer">
+            <tr>
+              <td colspan="3" class="total-label">Total</td>
+              <td id="cart-total-quantity">0</td>
+              <td id="cart-total-price">$0.00</td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="modal-actions">
+          <button id="continue-shopping">Continue Shopping</button>
+          <button id="final-checkout">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js "></script>
+  </body>
+</html>
